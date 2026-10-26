@@ -108,16 +108,16 @@ function AdminAuth({ mode }) {
       <Link to="/" className="auth-back-link"><FiArrowLeft /> Storefront</Link>
       <section className="admin-auth-shell">
         <div className="admin-auth-brand">
-          <span className="auth-monogram">AV</span>
-          <p className="auth-brand-label">ARAIRE VENTURES</p>
+          <img className="auth-logo" src="/nezer-rot-logo.svg" alt="Nezer Rot HomePro" />
+          <p className="auth-brand-label">KITCHEN · HOME · EVERYDAY</p>
           <h1>{isRegister ? 'Create your account.' : isPasswordRecovery ? 'Reset your password.' : isAdminLogin ? 'Administrator access.' : 'Welcome back.'}</h1>
           <p className="auth-brand-copy">
             {isRegister
-              ? 'Join the Araire Ventures community.'
+              ? 'Join Nezer Rot HomePro and keep your shopping in one place.'
               : isPasswordRecovery
-                ? 'Recover access to your Araire Ventures account.'
+                ? 'Recover access to your Nezer Rot HomePro account.'
                   : isAdminLogin
-                    ? 'Sign in to manage the Araire Ventures store.'
+                    ? 'Sign in to manage the Nezer Rot HomePro store.'
                 : 'Sign in and continue to your account dashboard.'}
           </p>
         </div>
@@ -218,7 +218,7 @@ function AdminAuth({ mode }) {
                 ? <>Remembered your password? <Link to="/login">Sign in</Link></>
                 : isAdminLogin
                   ? 'Administrator account required.'
-                  : <>New to Araire Ventures? <Link to="/register">Sign up</Link></>}
+                  : <>New to Nezer Rot HomePro? <Link to="/register">Sign up</Link></>}
           </p>
           {isResetPassword && (
             <p className="auth-admin-link"><Link to="/forgot-password" state={{ email: form.email }}>Send a new code</Link></p>
