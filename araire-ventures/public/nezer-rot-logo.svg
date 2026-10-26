@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="628" height="171" viewBox="0 0 628 171">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#a8d0ff" />
+      <stop offset="1" stop-color="#c4dcff" />
+    </linearGradient>
+    <radialGradient id="glow" cx="0" cy="0" r="1" gradientTransform="matrix(0 171 -628 0 0 0)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#eaf4ff" stop-opacity=".55" />
+      <stop offset="1" stop-color="#eaf4ff" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+  <rect width="628" height="171" fill="url(#sky)" />
+  <rect width="628" height="171" fill="url(#glow)" />
+  <path d="m411 111 74-64 25 24V49h17v37l31 26" fill="none" stroke="#092c51" stroke-linecap="round" stroke-linejoin="round" stroke-width="8" />
+  <text x="225" y="117" fill="#092c51" font-family="Arial, Helvetica, sans-serif" font-size="52" font-weight="900" letter-spacing="-1.5">NEZER-ROT</text>
+  <text x="260" y="162" fill="#e31e2b" font-family="Arial, Helvetica, sans-serif" font-size="54" font-weight="400" letter-spacing="-2">HomePro</text>
+</svg>

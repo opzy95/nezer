@@ -1,0 +1,152 @@
+import React, { useEffect, useState } from 'react';
+import { AnimatePresence, motion, useReducedMotion } from 'framer-motion';
+import { FiArrowRight, FiChevronLeft, FiChevronRight } from 'react-icons/fi';
+import { Link } from 'react-router-dom';
+import './Hero.css';
+
+const slides = [
+  {
+    eyebrow: 'Welcome to Nezer Rot HomePro',
+    title: 'Make everyday living feel effortless.',
+    description: 'Discover practical kitchen essentials and household favourites chosen to make your home work beautifully.',
+    image: '/iimage/goods3.jpeg',
+    category: 'Appliances',
+    path: '/appliances',
+    accent: 'Made for everyday living',
+  },
+  {
+    eyebrow: 'Everything your kitchen needs',
+    title: 'Bring more ease to your kitchen.',
+    description: 'From useful tools to kitchen favourites, find the little upgrades that make daily routines simpler.',
+    image: '/iimage/goods2.jpeg',
+    category: 'Kitchen',
+    path: '/kitchen',
+    accent: 'A kitchen made for you',
+  },
+  {
+    eyebrow: 'Smart finds for your home',
+    title: 'Meet your new everyday gadgets.',
+    description: 'Explore handy home and kitchen gadgets that bring a little more convenience to every day.',
+    image: '/iimage/goods4.jpeg',
+    category: 'Gadgets',
+    path: '/shop',
+    accent: 'Clever little upgrades',
+  },
+  {
+    eyebrow: 'Useful finds for every corner',
+    title: 'Find something for every room.',
+    description: 'Shop household and lifestyle essentials selected to bring comfort and function into your home.',
+    image: '/iimage/goods1.jpeg',
+    category: 'Shop',
+    path: '/shop',
+    accent: 'Your home, made easier',
+  },
+];
+
+function Hero() {
+  const [activeSlide, setActiveSlide] = useState(0);
+  const [isPaused, setIsPaused] = useState(false);
+  const shouldReduceMotion = useReducedMotion();
+
+  useEffect(() => {
+    if (isPaused || shouldReduceMotion) return undefined;
+
+    const timer = window.setInterval(() => {
+      setActiveSlide((current) => (current + 1) % slides.length);
+    }, 6000);
+
+    return () => window.clearInterval(timer);
+  }, [isPaused, shouldReduceMotion]);
+
+  const showSlide = (direction) => {
+    setActiveSlide((current) => (current + direction + slides.length) % slides.length);
+  };
+  const slide = slides[activeSlide];
+
+  return (
+    <section
+      className="hero"
+      aria-label="Featured collections"
+      aria-roledescription="carousel"
+      onMouseEnter={() => setIsPaused(true)}
+      onMouseLeave={() => setIsPaused(false)}
+      onFocusCapture={() => setIsPaused(true)}
+      onBlurCapture={(event) => {
+        if (!event.currentTarget.contains(event.relatedTarget)) setIsPaused(false);
+      }}
+    >
+      <div className="hero-inner">
+        <div className="hero-copy" aria-live={isPaused ? 'polite' : 'off'} aria-atomic="true">
+          <AnimatePresence mode="wait">
+            <motion.div
+              className="hero-copy-content"
+              key={activeSlide}
+              initial={shouldReduceMotion ? false : { opacity: 0, y: 16 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -10 }}
+              transition={{ duration: shouldReduceMotion ? 0 : 0.35 }}
+            >
+              <span className="hero-eyebrow"><span />{slide.eyebrow}</span>
+              <h1>{slide.title}</h1>
+              <p>{slide.description}</p>
+              <Link className="hero-cta" to={slide.path}>
+                Explore {slide.category} <FiArrowRight aria-hidden="true" />
+              </Link>
+              <div className="hero-account-actions" aria-label="Store and account links">
+              
+              </div>
+            </motion.div>
+          </AnimatePresence>
+
+          <div className="hero-controls">
+            <div className="hero-pagination" aria-label="Choose a featured collection">
+              {slides.map((item, index) => (
+                <button
+                  key={`${item.category}-${index}`}
+                  type="button"
+                  className={`hero-dot${activeSlide === index ? ' active' : ''}`}
+                  aria-label={`Show ${item.category} collection`}
+                  aria-current={activeSlide === index ? 'true' : undefined}
+                  onClick={() => setActiveSlide(index)}
+                />
+              ))}
+              <span className="hero-slide-number">0{activeSlide + 1} <span>/ 0{slides.length}</span></span>
+            </div>
+            <div className="hero-arrow-controls">
+              <button type="button" aria-label="Previous collection" onClick={() => showSlide(-1)}>
+                <FiChevronLeft aria-hidden="true" />
+              </button>
+              <button type="button" aria-label="Next collection" onClick={() => showSlide(1)}>
+                <FiChevronRight aria-hidden="true" />
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div className="hero-visual" aria-hidden="true">
+          <div className="hero-visual-orbit hero-visual-orbit-one" />
+          <div className="hero-visual-orbit hero-visual-orbit-two" />
+          <AnimatePresence mode="wait">
+            <motion.div
+              className="hero-image-card"
+              key={slide.image}
+              initial={shouldReduceMotion ? false : { opacity: 0, scale: 0.97, x: 14 }}
+              animate={{ opacity: 1, scale: 1, x: 0 }}
+              exit={{ opacity: 0, scale: 0.98, x: -10 }}
+              transition={{ duration: shouldReduceMotion ? 0 : 0.4 }}
+            >
+              <img src={slide.image} alt="" />
+            </motion.div>
+          </AnimatePresence>
+          <div className="hero-image-note">
+            <span className="hero-note-mark">✳</span>
+            <span>{slide.accent}</span>
+          </div>
+          <span className="hero-visual-label">NEZER ROT HOMEPRO <span>•</span> HOME &amp; LIFESTYLE</span>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+export default Hero;

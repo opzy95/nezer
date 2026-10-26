@@ -1,0 +1,82 @@
+{
+  "appliancesProducts": [
+    {
+      "id": 1,
+      "name": "Dry Mill",
+      "price": "12,000",
+      "image": "/iimage/Dry_mill.jpeg",
+      "rating": 4.6
+    },
+    {
+      "id": 2,
+      "name": "3 Jar Blender",
+      "price": "61,000",
+      "image": "/iimage/Excella_blender.jpeg",
+      "rating": 4.8
+    },
+    {
+      "id": 3,
+      "name": "Clipper",
+      "price": "14,600",
+      "image": "/image/electric%20cooker.jpeg",
+      "rating": 4.7
+    },
+    {
+      "id": 4,
+      "name": "Big Arm BP Monitor",
+      "price": "12,000",
+      "image": "/iimage/BP_monitor.jpeg",
+      "rating": 4.4
+    },
+    {
+      "id": 5,
+      "name": "Standing Fan",
+      "price": "85,000",
+      "image": "/image/standingfan.jpeg",
+      "rating": 4.5
+    },
+    {
+      "id": 6,
+      "name": "Big Nova Hand Dryer",
+      "price": "7000",
+      "image": "/iimage/Hand_dryer.jpeg",
+      "rating": 4.3
+    },
+    {
+      "id": 7,
+      "name": "Cosynest Infrared Cooker",
+      "price": "28,500",
+      "image": "/iimage/Infrared_cooker.jpeg",
+      "rating": 4.4
+    },
+    {
+      "id": 8,
+      "name": "Trifone Blender",
+      "price": "26,000",
+      "image": "/iimage/Trifone_blender.jpeg",
+      "rating": 4.9
+    },
+    {
+      "id": 9,
+      "name": "Table fan",
+      "price": "26,500",
+      "image": "/iimage/Table_fan.jpeg",
+      "rating": 4.9
+    },
+    {
+      "id": 10,
+      "name": "Camping Light",
+      "price": "9000",
+      "image": "/image/camping-light.jpeg",
+      "rating": 4.9
+    },
+    {
+      "id": 11,
+      "name": "Impusle Sealer",
+      "price": "17,000",
+      "image": "/image/impulse-sealer.jpeg",
+      "rating": 4.9
+    }
+    
+  ]
+}

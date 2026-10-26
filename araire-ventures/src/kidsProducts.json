@@ -1,0 +1,174 @@
+{
+  "kidsProducts": [
+    {
+      "id": 1,
+      "name": "Bottle Umbrella",
+      "price": "4500",
+      "image": "/iimage/Bottle_umbrella.jpeg",
+      "rating": 4.7
+    },
+    
+    {
+      "id": 2,
+      "name": "Thick Towel",
+      "price": "4500",
+      "image": "/iimage/Thick_towel.jpeg",
+      "rating": 4.3
+    },
+    {
+      "id": 3,
+      "name": "Bag Hanger",
+      "price": "3000",
+      "image": "/iimage/Bag_hanger.jpeg",
+      "rating": 4.6
+    },
+    {
+      "id": 4,
+      "name": "New Travelling Bag",
+      "price": "12,000",
+      "image": "/iimage/New_Travelling_Bag.jpeg",
+      "rating": 4.4
+    },
+    {
+      "id": 5,
+      "name": "Portable Umbrella",
+      "price": "5000",
+      "image": "/iimage/Rose_Umbrella.jpeg",
+      "rating": 4.5
+    },
+    {
+      "id": 6,
+      "name": "Kid Chair",
+      "price": "6150",
+      "image": "/image/tick-kid-chair.jpeg",
+      "rating": 4.5
+    },
+    {
+      "id": 7,
+      "name": "Kid Chair",
+      "price": "3500",
+      "image": "/image/kid-chair.jpeg",
+      "rating": 4.5
+    },
+    {
+      "id": 8,
+      "name": "Umbrella",
+      "price": "4500",
+      "image": "/image/umbrella.jpeg",
+      "rating": 4.5
+    },
+    {
+      "id": 9,
+      "name": "Travelling Bag",
+      "price": "7500",
+      "image": "/image/Traveling-bag.jpeg",
+      "rating": 4.5
+    },
+    {
+      "id": 10,
+      "name": "Luxury Bottle",
+      "price": "2400",
+      "image": "/image/bottle.jpeg",
+      "rating": 4.5
+    },
+    {
+      "id": 11,
+      "name": "Luxury Bottle",
+      "price": "2400",
+      "image": "/image/650ml-bottle.jpeg",
+      "rating": 4.5
+    },
+    {
+      "id": 12,
+      "name": "Luxury Bottle",
+      "price": "1600",
+      "image": "/image/800ml-bottle.jpeg",
+      "rating": 4.5
+    },
+    {
+      "id": 13,
+      "name": "Banana Umbrella",
+      "price": "4800",
+      "image": "/image/banana-umbrella.jpeg",
+      "rating": 4.5
+    },
+    {
+      "id": 14,
+      "name": "Capsule Umbrella",
+      "price": "4800",
+      "image": "/image/capsule-umbrella.jpeg",
+      "rating": 4.5
+    },
+    {
+      "id": 15,
+      "name": "20pcs Peg",
+      "price": "800",
+      "image": "/iimage/Peg.jpeg",
+      "rating": 4.5
+    },
+    {
+      "id": 16,
+      "name": "Kids Ipad",
+      "price": "65,000",
+      "image": "/image/ipad-ultra-tablet.jpeg",
+      "rating": 4.5
+    },
+    {
+      "id": 17,
+      "name": "Power Bank",
+      "price": "17,000",
+      "image": "/image/powerbank-20kmah.jpeg",
+      "rating": 4.5
+    },
+    {
+      "id": 18,
+      "name": "Power Bank",
+      "price": "19,000",
+      "image": "/image/power-bank-20kmha.jpeg",
+      "rating": 4.5
+    },
+    {
+      "id": 19,
+      "name": "Rabbit Phone Holder",
+      "price": "2200",
+      "image": "/image/rabbit-phone-holder.jpeg",
+      "rating": 4.5
+    },
+    {
+      "id": 20,
+      "name": "Phone Holder",
+      "price": "2000",
+      "image": "/image/phone-holder.jpeg",
+      "rating": 4.5
+    },
+    {
+      "id": 21,
+      "name": "Dotted Towel",
+      "price": "5500",
+      "image": "/image/Dotted-towel.jpeg",
+      "rating": 4.5
+    },{
+      "id": 22,
+      "name": "Drum",
+      "price": "8500",
+      "image": "/image/drum.jpeg",
+      "rating": 4.5
+    },{
+      "id": 23,
+      "name": "Big Container",
+      "price": "8500",
+      "image": "/image/bg.jpeg",
+      "rating": 4.5
+    },{
+      "id": 24,
+      "name": "Spice Rack",
+      "price": "3500",
+      "image": "/image/spice.jpeg",
+      "rating": 4.5
+    }
+
+  ]
+  
+
+  
+}
